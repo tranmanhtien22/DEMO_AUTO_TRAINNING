@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.11 on win32)" generated="20230602 16:45:50.716" rpa="false" schemaversion="3">
+<suite id="s1" name="Auto Training" source="C:\Users\trungtlt\Documents\Auto Training">
+<suite id="s1-s1" name="Example" source="C:\Users\trungtlt\Documents\Auto Training\example.robot">
+<test id="s1-s1-t1" name="Should send keys to search box and then check the value" line="15">
+<kw name="Open Test Application">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>appPackage=com.bluestacks.filemanager</arg>
+<arg>appActivity=.MainActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230602 16:45:50.926" endtime="20230602 16:45:57.996"/>
+</kw>
+<status status="PASS" starttime="20230602 16:45:50.925" endtime="20230602 16:45:57.996"/>
+</kw>
+<kw name="Submit Search">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CLICK_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230602 16:45:58.002" level="INFO">Clicking element 'com.bluestacks.filemanager:id/fragment_side_bar_container'.</msg>
+<msg timestamp="20230602 16:45:59.454" level="INFO">criteria is com.bluestacks.filemanager:id/fragment_side_bar_container</msg>
+<status status="PASS" starttime="20230602 16:45:57.999" endtime="20230602 16:45:59.454"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CLICK_SEARCH_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230602 16:45:59.457" level="INFO">Clicking element 'com.bluestacks.filemanager:id/search_button'.</msg>
+<msg timestamp="20230602 16:45:59.492" level="INFO">criteria is com.bluestacks.filemanager:id/search_button</msg>
+<status status="PASS" starttime="20230602 16:45:59.455" endtime="20230602 16:45:59.492"/>
+</kw>
+<status status="PASS" starttime="20230602 16:45:57.997" endtime="20230602 16:45:59.492"/>
+</kw>
+<kw name="Input Search Query">
+<arg>Movies</arg>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${SEARCH_BAR}</arg>
+<arg>${query}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230602 16:45:59.495" level="INFO">Typing text 'Movies' into text field 'com.bluestacks.filemanager:id/search_src_text'</msg>
+<msg timestamp="20230602 16:46:00.764" level="INFO">criteria is com.bluestacks.filemanager:id/search_src_text</msg>
+<status status="PASS" starttime="20230602 16:45:59.494" endtime="20230602 16:46:00.765"/>
+</kw>
+<status status="PASS" starttime="20230602 16:45:59.493" endtime="20230602 16:46:00.765"/>
+</kw>
+<status status="PASS" starttime="20230602 16:45:50.925" endtime="20230602 16:46:00.766"/>
+</test>
+<doc>Simple example using AppiumLibrary</doc>
+<status status="PASS" starttime="20230602 16:45:50.743" endtime="20230602 16:46:00.768"/>
+</suite>
+<status status="PASS" starttime="20230602 16:45:50.722" endtime="20230602 16:46:00.772"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Auto Training">Auto Training</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Example">Auto Training.Example</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
